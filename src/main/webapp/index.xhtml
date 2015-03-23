@@ -10,6 +10,7 @@
       <f:facet name="first">
         <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
         <title>jMis -- MIS in java</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
       </f:facet>
     </h:head>
 
@@ -18,7 +19,8 @@
       <p:layout fullPage="true">
 
         <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
-          jMis TEST versie 0.1  21-03-2015
+          versie 0.1  21-03-2015 Eerste opzet Github
+          jMis TEST versie 0.2  23-03-2015 Ambtsect toegevoegd
         </p:layoutUnit>
 
         <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
@@ -29,7 +31,7 @@
           <p:menu>
             <p:submenu label="Resources">
               <p:menuitem value="Demo" url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
-              <p:menuitem value="Documentation" url="http://www.primefaces.org/documentation.html" />
+              <p:menuitem value="Ambtsect" url="/ambtsect/List" />
               <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
               <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
 
@@ -39,12 +41,15 @@
         </p:layoutUnit>
 
         <p:layoutUnit position="center">
-          Welcome to PrimeFaces
+          <br />
+          <h:link outcome="/ambtsect/List" value="Show All Ambtsect Items"/>
         </p:layoutUnit>
 
       </p:layout>
 
+
     </h:body>
+
 
   </f:view>
 </html>

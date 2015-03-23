@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+  <ui:composition>
+
+    <p:dialog id="AmbtsectViewDlg" widgetVar="AmbtsectViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewAmbtsectTitle}">
+      <h:form id="AmbtsectViewForm">
+        <h:panelGroup id="display">
+          <p:panelGrid columns="2" rendered="#{ambtsectController.selected != null}">
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_keyid}"/>
+            <h:outputText value="#{ambtsectController.selected.keyid}" title="#{bundle.ViewAmbtsectTitle_keyid}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_ambtcode}"/>
+            <h:outputText value="#{ambtsectController.selected.ambtcode}" title="#{bundle.ViewAmbtsectTitle_ambtcode}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_newsect}"/>
+            <h:outputText value="#{ambtsectController.selected.newsect}" title="#{bundle.ViewAmbtsectTitle_newsect}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_gebDat}"/>
+            <h:outputText value="#{ambtsectController.selected.gebDat}" title="#{bundle.ViewAmbtsectTitle_gebDat}">
+              <f:convertDateTime pattern="MM/dd/yyyy" />
+            </h:outputText>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_naam}"/>
+            <h:outputText value="#{ambtsectController.selected.naam}" title="#{bundle.ViewAmbtsectTitle_naam}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_lognaam}"/>
+            <h:outputText value="#{ambtsectController.selected.lognaam}" title="#{bundle.ViewAmbtsectTitle_lognaam}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_kei2log}"/>
+            <h:outputText value="#{ambtsectController.selected.kei2log}" title="#{bundle.ViewAmbtsectTitle_kei2log}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_emailadr}"/>
+            <h:outputText value="#{ambtsectController.selected.emailadr}" title="#{bundle.ViewAmbtsectTitle_emailadr}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_isEr}"/>
+            <h:outputText value="#{ambtsectController.selected.isEr}" title="#{bundle.ViewAmbtsectTitle_isEr}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_cnaam}"/>
+            <h:outputText value="#{ambtsectController.selected.cnaam}" title="#{bundle.ViewAmbtsectTitle_cnaam}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_lastIn}"/>
+            <h:outputText value="#{ambtsectController.selected.lastIn}" title="#{bundle.ViewAmbtsectTitle_lastIn}">
+              <f:convertDateTime pattern="MM/dd/yyyy" />
+            </h:outputText>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_dienst}"/>
+            <h:outputText value="#{ambtsectController.selected.dienst}" title="#{bundle.ViewAmbtsectTitle_dienst}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_uitDienst}"/>
+            <h:outputText value="#{ambtsectController.selected.uitDienst}" title="#{bundle.ViewAmbtsectTitle_uitDienst}">
+              <f:convertDateTime pattern="MM/dd/yyyy" />
+            </h:outputText>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_passw}"/>
+            <h:outputText value="#{ambtsectController.selected.passw}" title="#{bundle.ViewAmbtsectTitle_passw}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_kamer}"/>
+            <h:outputText value="#{ambtsectController.selected.kamer}" title="#{bundle.ViewAmbtsectTitle_kamer}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_telIntern}"/>
+            <h:outputText value="#{ambtsectController.selected.telIntern}" title="#{bundle.ViewAmbtsectTitle_telIntern}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_functie}"/>
+            <h:outputText value="#{ambtsectController.selected.functie}" title="#{bundle.ViewAmbtsectTitle_functie}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_udate}"/>
+            <h:outputText value="#{ambtsectController.selected.udate}" title="#{bundle.ViewAmbtsectTitle_udate}">
+              <f:convertDateTime pattern="MM/dd/yyyy" />
+            </h:outputText>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_udoor}"/>
+            <h:outputText value="#{ambtsectController.selected.udoor}" title="#{bundle.ViewAmbtsectTitle_udoor}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_medKeur}"/>
+            <h:outputText value="#{ambtsectController.selected.medKeur}" title="#{bundle.ViewAmbtsectTitle_medKeur}">
+              <f:convertDateTime pattern="MM/dd/yyyy" />
+            </h:outputText>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_medKeurVv}"/>
+            <h:outputText value="#{ambtsectController.selected.medKeurVv}" title="#{bundle.ViewAmbtsectTitle_medKeurVv}">
+              <f:convertDateTime pattern="MM/dd/yyyy" />
+            </h:outputText>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_adres}"/>
+            <h:outputText value="#{ambtsectController.selected.adres}" title="#{bundle.ViewAmbtsectTitle_adres}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_pc}"/>
+            <h:outputText value="#{ambtsectController.selected.pc}" title="#{bundle.ViewAmbtsectTitle_pc}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_gsm}"/>
+            <h:outputText value="#{ambtsectController.selected.gsm}" title="#{bundle.ViewAmbtsectTitle_gsm}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_stad}"/>
+            <h:outputText value="#{ambtsectController.selected.stad}" title="#{bundle.ViewAmbtsectTitle_stad}"/>
+            <h:outputText value="#{bundle.ViewAmbtsectLabel_onsmis}"/>
+            <h:outputText value="#{ambtsectController.selected.onsmis}" title="#{bundle.ViewAmbtsectTitle_onsmis}"/>
+          </p:panelGrid>
+          <p:commandButton value="#{bundle.Close}" onclick="AmbtsectViewDialog.hide()"/>
+        </h:panelGroup>
+      </h:form>
+    </p:dialog>
+
+  </ui:composition>
+</html>

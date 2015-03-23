@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+  <ui:composition>
+
+    <p:dialog id="AmbtsectCreateDlg" widgetVar="AmbtsectCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateAmbtsectTitle}">
+      <h:form id="AmbtsectCreateForm">
+        <h:panelGroup id="display">
+          <p:panelGrid columns="2" rendered="#{ambtsectController.selected != null}">
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_keyid}" for="keyid" />
+            <p:inputText id="keyid" value="#{ambtsectController.selected.keyid}" title="#{bundle.CreateAmbtsectTitle_keyid}" required="true" requiredMessage="#{bundle.CreateAmbtsectRequiredMessage_keyid}"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_ambtcode}" for="ambtcode" />
+            <p:inputText id="ambtcode" value="#{ambtsectController.selected.ambtcode}" title="#{bundle.CreateAmbtsectTitle_ambtcode}" required="true" requiredMessage="#{bundle.CreateAmbtsectRequiredMessage_ambtcode}"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_newsect}" for="newsect" />
+            <p:inputText id="newsect" value="#{ambtsectController.selected.newsect}" title="#{bundle.CreateAmbtsectTitle_newsect}" required="true" requiredMessage="#{bundle.CreateAmbtsectRequiredMessage_newsect}"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_gebDat}" for="gebDat" />
+            <p:calendar id="gebDat" pattern="MM/dd/yyyy" value="#{ambtsectController.selected.gebDat}" title="#{bundle.EditAmbtsectTitle_gebDat}"  showOn="button"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_naam}" for="naam" />
+            <p:inputText id="naam" value="#{ambtsectController.selected.naam}" title="#{bundle.CreateAmbtsectTitle_naam}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_lognaam}" for="lognaam" />
+            <p:inputText id="lognaam" value="#{ambtsectController.selected.lognaam}" title="#{bundle.CreateAmbtsectTitle_lognaam}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_kei2log}" for="kei2log" />
+            <p:inputText id="kei2log" value="#{ambtsectController.selected.kei2log}" title="#{bundle.CreateAmbtsectTitle_kei2log}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_emailadr}" for="emailadr" />
+            <p:inputText id="emailadr" value="#{ambtsectController.selected.emailadr}" title="#{bundle.CreateAmbtsectTitle_emailadr}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_isEr}" for="isEr" />
+            <p:inputText id="isEr" value="#{ambtsectController.selected.isEr}" title="#{bundle.CreateAmbtsectTitle_isEr}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_cnaam}" for="cnaam" />
+            <p:inputText id="cnaam" value="#{ambtsectController.selected.cnaam}" title="#{bundle.CreateAmbtsectTitle_cnaam}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_lastIn}" for="lastIn" />
+            <p:calendar id="lastIn" pattern="MM/dd/yyyy" value="#{ambtsectController.selected.lastIn}" title="#{bundle.EditAmbtsectTitle_lastIn}"  showOn="button"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_dienst}" for="dienst" />
+            <p:inputText id="dienst" value="#{ambtsectController.selected.dienst}" title="#{bundle.CreateAmbtsectTitle_dienst}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_uitDienst}" for="uitDienst" />
+            <p:calendar id="uitDienst" pattern="MM/dd/yyyy" value="#{ambtsectController.selected.uitDienst}" title="#{bundle.EditAmbtsectTitle_uitDienst}"  showOn="button"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_passw}" for="passw" />
+            <p:inputText id="passw" value="#{ambtsectController.selected.passw}" title="#{bundle.CreateAmbtsectTitle_passw}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_kamer}" for="kamer" />
+            <p:inputText id="kamer" value="#{ambtsectController.selected.kamer}" title="#{bundle.CreateAmbtsectTitle_kamer}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_telIntern}" for="telIntern" />
+            <p:inputText id="telIntern" value="#{ambtsectController.selected.telIntern}" title="#{bundle.CreateAmbtsectTitle_telIntern}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_functie}" for="functie" />
+            <p:inputText id="functie" value="#{ambtsectController.selected.functie}" title="#{bundle.CreateAmbtsectTitle_functie}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_udate}" for="udate" />
+            <p:calendar id="udate" pattern="MM/dd/yyyy" value="#{ambtsectController.selected.udate}" title="#{bundle.EditAmbtsectTitle_udate}"  showOn="button"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_udoor}" for="udoor" />
+            <p:inputText id="udoor" value="#{ambtsectController.selected.udoor}" title="#{bundle.CreateAmbtsectTitle_udoor}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_medKeur}" for="medKeur" />
+            <p:calendar id="medKeur" pattern="MM/dd/yyyy" value="#{ambtsectController.selected.medKeur}" title="#{bundle.EditAmbtsectTitle_medKeur}"  showOn="button"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_medKeurVv}" for="medKeurVv" />
+            <p:calendar id="medKeurVv" pattern="MM/dd/yyyy" value="#{ambtsectController.selected.medKeurVv}" title="#{bundle.EditAmbtsectTitle_medKeurVv}"  showOn="button"/>
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_adres}" for="adres" />
+            <p:inputText id="adres" value="#{ambtsectController.selected.adres}" title="#{bundle.CreateAmbtsectTitle_adres}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_pc}" for="pc" />
+            <p:inputText id="pc" value="#{ambtsectController.selected.pc}" title="#{bundle.CreateAmbtsectTitle_pc}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_gsm}" for="gsm" />
+            <p:inputText id="gsm" value="#{ambtsectController.selected.gsm}" title="#{bundle.CreateAmbtsectTitle_gsm}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_stad}" for="stad" />
+            <p:inputText id="stad" value="#{ambtsectController.selected.stad}" title="#{bundle.CreateAmbtsectTitle_stad}" />
+            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_onsmis}" for="onsmis" />
+            <p:inputTextarea rows="4" cols="30" id="onsmis" value="#{ambtsectController.selected.onsmis}" title="#{bundle.CreateAmbtsectTitle_onsmis}" />
+          </p:panelGrid>
+          <p:commandButton actionListener="#{ambtsectController.create}" value="#{bundle.Save}" update="display,:AmbtsectListForm:datalist,:growl" oncomplete="handleSubmit(args,'AmbtsectCreateDialog');"/>
+          <p:commandButton value="#{bundle.Cancel}" onclick="AmbtsectCreateDialog.hide()"/>
+        </h:panelGroup>
+      </h:form>
+    </p:dialog>
+
+  </ui:composition>
+</html>

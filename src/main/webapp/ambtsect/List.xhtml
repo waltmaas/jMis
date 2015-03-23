@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+  <ui:composition template="/template.xhtml">
+
+
+    <ui:define name="title">
+      <h:outputText value="#{bundle.ListAmbtsectTitle}"></h:outputText>
+    </ui:define>
+
+    <ui:define name="body">
+      <h:form id="AmbtsectListForm">
+        <p:panel header="#{bundle.ListAmbtsectTitle}">
+          <p:dataTable id="datalist" value="#{ambtsectController.items}" var="item"
+                       selectionMode="single" selection="#{ambtsectController.selected}"
+                       paginator="true"
+                       rowKey="#{item.keyid}"
+                       rows="10"
+                       rowsPerPageTemplate="10,20,30,40,50"
+                       >
+
+            <p:ajax event="rowSelect"   update="createButton viewButton editButton deleteButton"/>
+            <p:ajax event="rowUnselect" update="createButton viewButton editButton deleteButton"/>
+
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_keyid}"/>
+              </f:facet>
+              <h:outputText value="#{item.keyid}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_ambtcode}"/>
+              </f:facet>
+              <h:outputText value="#{item.ambtcode}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_newsect}"/>
+              </f:facet>
+              <h:outputText value="#{item.newsect}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_gebDat}"/>
+              </f:facet>
+              <h:outputText value="#{item.gebDat}">
+                <f:convertDateTime pattern="MM/dd/yyyy" />
+              </h:outputText>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_naam}"/>
+              </f:facet>
+              <h:outputText value="#{item.naam}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_lognaam}"/>
+              </f:facet>
+              <h:outputText value="#{item.lognaam}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_kei2log}"/>
+              </f:facet>
+              <h:outputText value="#{item.kei2log}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_emailadr}"/>
+              </f:facet>
+              <h:outputText value="#{item.emailadr}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_isEr}"/>
+              </f:facet>
+              <h:outputText value="#{item.isEr}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_cnaam}"/>
+              </f:facet>
+              <h:outputText value="#{item.cnaam}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_lastIn}"/>
+              </f:facet>
+              <h:outputText value="#{item.lastIn}">
+                <f:convertDateTime pattern="MM/dd/yyyy" />
+              </h:outputText>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_dienst}"/>
+              </f:facet>
+              <h:outputText value="#{item.dienst}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_uitDienst}"/>
+              </f:facet>
+              <h:outputText value="#{item.uitDienst}">
+                <f:convertDateTime pattern="MM/dd/yyyy" />
+              </h:outputText>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_passw}"/>
+              </f:facet>
+              <h:outputText value="#{item.passw}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_kamer}"/>
+              </f:facet>
+              <h:outputText value="#{item.kamer}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_telIntern}"/>
+              </f:facet>
+              <h:outputText value="#{item.telIntern}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_functie}"/>
+              </f:facet>
+              <h:outputText value="#{item.functie}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_udate}"/>
+              </f:facet>
+              <h:outputText value="#{item.udate}">
+                <f:convertDateTime pattern="MM/dd/yyyy" />
+              </h:outputText>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_udoor}"/>
+              </f:facet>
+              <h:outputText value="#{item.udoor}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_medKeur}"/>
+              </f:facet>
+              <h:outputText value="#{item.medKeur}">
+                <f:convertDateTime pattern="MM/dd/yyyy" />
+              </h:outputText>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_medKeurVv}"/>
+              </f:facet>
+              <h:outputText value="#{item.medKeurVv}">
+                <f:convertDateTime pattern="MM/dd/yyyy" />
+              </h:outputText>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_adres}"/>
+              </f:facet>
+              <h:outputText value="#{item.adres}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_pc}"/>
+              </f:facet>
+              <h:outputText value="#{item.pc}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_gsm}"/>
+              </f:facet>
+              <h:outputText value="#{item.gsm}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_stad}"/>
+              </f:facet>
+              <h:outputText value="#{item.stad}"/>
+            </p:column>
+            <p:column>
+              <f:facet name="header">
+                <h:outputText value="#{bundle.ListAmbtsectTitle_onsmis}"/>
+              </f:facet>
+              <h:outputText value="#{item.onsmis}"/>
+            </p:column>
+            <f:facet name="footer">
+              <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{ambtsectController.prepareCreate}" update=":AmbtsectCreateForm" oncomplete="PF('AmbtsectCreateDialog').show()"/>
+              <p:commandButton id="viewButton"   icon="ui-icon-search" value="#{bundle.View}" update=":AmbtsectViewForm" oncomplete="PF('AmbtsectViewDialog').show()" disabled="#{empty ambtsectController.selected}"/>
+              <p:commandButton id="editButton"   icon="ui-icon-pencil" value="#{bundle.Edit}" update=":AmbtsectEditForm" oncomplete="PF('AmbtsectEditDialog').show()" disabled="#{empty ambtsectController.selected}"/>
+              <p:commandButton id="deleteButton" icon="ui-icon-trash"  value="#{bundle.Delete}" actionListener="#{ambtsectController.destroy}" update=":growl,datalist" disabled="#{empty ambtsectController.selected}"/>
+            </f:facet>
+          </p:dataTable>
+        </p:panel>
+      </h:form>
+
+      <ui:include src="Create.xhtml"/>
+      <ui:include src="Edit.xhtml"/>
+      <ui:include src="View.xhtml"/>
+    </ui:define>
+  </ui:composition>
+
+</html>
