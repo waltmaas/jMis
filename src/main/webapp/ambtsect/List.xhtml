@@ -50,7 +50,7 @@
                 <h:outputText value="#{bundle.ListAmbtsectTitle_gebDat}"/>
               </f:facet>
               <h:outputText value="#{item.gebDat}">
-                <f:convertDateTime pattern="MM/dd/yyyy" />
+                <f:convertDateTime pattern="dd-MMyyyy" />
               </h:outputText>
             </p:column>
             <p:column>
@@ -94,7 +94,7 @@
                 <h:outputText value="#{bundle.ListAmbtsectTitle_lastIn}"/>
               </f:facet>
               <h:outputText value="#{item.lastIn}">
-                <f:convertDateTime pattern="MM/dd/yyyy" />
+                <f:convertDateTime pattern="dd-MM-yyyy" />
               </h:outputText>
             </p:column>
             <p:column>
@@ -140,7 +140,7 @@
                 <h:outputText value="#{bundle.ListAmbtsectTitle_udate}"/>
               </f:facet>
               <h:outputText value="#{item.udate}">
-                <f:convertDateTime pattern="MM/dd/yyyy" />
+                <f:convertDateTime pattern="dd-MM-yyyy" />
               </h:outputText>
             </p:column>
             <p:column>
@@ -154,7 +154,7 @@
                 <h:outputText value="#{bundle.ListAmbtsectTitle_medKeur}"/>
               </f:facet>
               <h:outputText value="#{item.medKeur}">
-                <f:convertDateTime pattern="MM/dd/yyyy" />
+                <f:convertDateTime pattern="dd-MM-yyyy" />
               </h:outputText>
             </p:column>
             <p:column>
@@ -162,7 +162,7 @@
                 <h:outputText value="#{bundle.ListAmbtsectTitle_medKeurVv}"/>
               </f:facet>
               <h:outputText value="#{item.medKeurVv}">
-                <f:convertDateTime pattern="MM/dd/yyyy" />
+                <f:convertDateTime pattern="dd-MM-yyyy" />
               </h:outputText>
             </p:column>
             <p:column>
@@ -188,12 +188,6 @@
                 <h:outputText value="#{bundle.ListAmbtsectTitle_stad}"/>
               </f:facet>
               <h:outputText value="#{item.stad}"/>
-            </p:column>
-            <p:column>
-              <f:facet name="header">
-                <h:outputText value="#{bundle.ListAmbtsectTitle_onsmis}"/>
-              </f:facet>
-              <h:outputText value="#{item.onsmis}"/>
             </p:column>
             <f:facet name="footer">
               <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{ambtsectController.prepareCreate}" update=":AmbtsectCreateForm" oncomplete="PF('AmbtsectCreateDialog').show()"/>
