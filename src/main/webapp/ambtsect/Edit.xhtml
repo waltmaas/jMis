@@ -11,7 +11,7 @@
     <p:dialog id="AmbtsectEditDlg" widgetVar="AmbtsectEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditAmbtsectTitle}">
       <h:form id="AmbtsectEditForm">
         <h:panelGroup id="display">
-          <p:panelGrid columns="2" rendered="#{ambtsectController.selected != null}">
+          <p:panelGrid columns="4" rendered="#{ambtsectController.selected != null}">
             <p:outputLabel value="#{bundle.EditAmbtsectLabel_keyid}" for="keyid" />
             <p:inputText id="keyid" value="#{ambtsectController.selected.keyid}" title="#{bundle.EditAmbtsectTitle_keyid}" required="true" requiredMessage="#{bundle.EditAmbtsectRequiredMessage_keyid}"/>
             <p:outputLabel value="#{bundle.EditAmbtsectLabel_ambtcode}" for="ambtcode" />

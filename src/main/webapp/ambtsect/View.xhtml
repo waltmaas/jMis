@@ -11,7 +11,7 @@
     <p:dialog id="AmbtsectViewDlg" widgetVar="AmbtsectViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewAmbtsectTitle}">
       <h:form id="AmbtsectViewForm">
         <h:panelGroup id="display">
-          <p:panelGrid columns="2" rendered="#{ambtsectController.selected != null}">
+          <p:panelGrid columns="4" rendered="#{ambtsectController.selected != null}">
             <h:outputText value="#{bundle.ViewAmbtsectLabel_keyid}"/>
             <h:outputText value="#{ambtsectController.selected.keyid}" title="#{bundle.ViewAmbtsectTitle_keyid}"/>
             <h:outputText value="#{bundle.ViewAmbtsectLabel_ambtcode}"/>

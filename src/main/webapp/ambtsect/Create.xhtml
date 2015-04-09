@@ -11,9 +11,7 @@
     <p:dialog id="AmbtsectCreateDlg" widgetVar="AmbtsectCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateAmbtsectTitle}">
       <h:form id="AmbtsectCreateForm">
         <h:panelGroup id="display">
-          <p:panelGrid columns="2" rendered="#{ambtsectController.selected != null}">
-            <p:outputLabel value="#{bundle.CreateAmbtsectLabel_keyid}" for="keyid" />
-            <p:inputText id="keyid" value="#{ambtsectController.selected.keyid}" title="#{bundle.CreateAmbtsectTitle_keyid}" required="true" requiredMessage="#{bundle.CreateAmbtsectRequiredMessage_keyid}"/>
+          <p:panelGrid columns="4" rendered="#{ambtsectController.selected != null}">
             <p:outputLabel value="#{bundle.CreateAmbtsectLabel_ambtcode}" for="ambtcode" />
             <p:inputText id="ambtcode" value="#{ambtsectController.selected.ambtcode}" title="#{bundle.CreateAmbtsectTitle_ambtcode}" required="true" requiredMessage="#{bundle.CreateAmbtsectRequiredMessage_ambtcode}"/>
             <p:outputLabel value="#{bundle.CreateAmbtsectLabel_newsect}" for="newsect" />
