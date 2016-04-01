@@ -5,51 +5,59 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
 
-  <f:view contentType="text/html">
-    <h:head>
-      <f:facet name="first">
-        <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-        <title>jMis -- MIS in java</title>
-        <h:outputStylesheet name="css/jsfcrud.css"/>
-      </f:facet>
-      <a href="ambtsect/View.xhtml"></a>
-    </h:head>
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>jMis -- MIS in java</title>
+                <h:outputStylesheet name="css/jsfcrud.css"/>
+            </f:facet>
+            <a href="ambtsect/View.xhtml"></a>
+        </h:head>
 
-    <h:body>
+        <h:body>
 
-      <p:layout fullPage="true">
+            <p:layout fullPage="true">
 
-        <p:layoutUnit position="north" size="100" resizable="true" 
-                      closable="true" collapsible="true">
-          jMis TEST versie 0.3  19-02-2016 Ambtsect uitgewerkt
-        </p:layoutUnit>
+                <p:layoutUnit position="north" size="100" resizable="true" 
+                              closable="true" collapsible="true">
+                    jMis TEST versie 0.3  19-02-2016 Ambtsect uitgewerkt
+                </p:layoutUnit>
 
-        <p:layoutUnit position="south" size="50" closable="true" 
-                      collapsible="true">
-          Footer
-        </p:layoutUnit>
+                <p:layoutUnit position="south" size="50" closable="true" 
+                              collapsible="true">
+                    Footer
+                </p:layoutUnit>
 
-        <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
-          <p:menu>
-            <p:submenu label="Resources">
-              <p:menuitem value="Demo" 
-                          url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
-              <p:menuitem value="Ambtsect" url="/ambtsect/List" />
-              <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
-              <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
-            </p:submenu>
-          </p:menu>
-        </p:layoutUnit>
+                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                    <p:menu>
+                        <p:submenu label="Resources">
+                            <p:menuitem value="Demo" 
+                                        url="http://www.primefaces.org/showcase-labs/ui/home.jsf" />
+                            <p:menuitem value="Thuis" url="https://waltmaas.duckdns.org" />
+                            <p:menuitem value="Forum" url="http://forum.primefaces.org/" />
+                            <p:menuitem value="Themes" url="http://www.primefaces.org/themes.html" />
+                        </p:submenu>
+                    </p:menu>
+                </p:layoutUnit>
 
-        <p:layoutUnit position="center">
-          <br />
-          <h:link outcome="/ambtsect/List" value="Show All Ambtsect Items"/>
-        </p:layoutUnit>
+                <p:layoutUnit position="center">
+                    <br />
+                    <h:link outcome="/ambtsect/List" value="Show All Ambtsect Items"/>
+                    <br />
+                    <h:link outcome="/werksodm/List" value="Show All Werksodm Items"/>
+                </p:layoutUnit>
 
-      </p:layout>
+            </p:layout>
 
-    </h:body>
+            <br />
 
-  </f:view>
+            <br />
+
+        </h:body>
+
+
+
+    </f:view>
 </html>
 

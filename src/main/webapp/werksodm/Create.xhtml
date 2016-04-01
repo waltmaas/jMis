@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="WerksodmCreateDlg" widgetVar="WerksodmCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateWerksodmTitle}">
+            <h:form id="WerksodmCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{werksodmController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_keyid}" for="keyid" />
+                        <p:inputText id="keyid" value="#{werksodmController.selected.keyid}" title="#{bundle.CreateWerksodmTitle_keyid}" required="true" requiredMessage="#{bundle.CreateWerksodmRequiredMessage_keyid}"/>
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_ambtcode}" for="ambtcode" />
+                        <p:inputText id="ambtcode" value="#{werksodmController.selected.ambtcode}" title="#{bundle.CreateWerksodmTitle_ambtcode}" />
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_nsect}" for="nsect" />
+                        <p:inputText id="nsect" value="#{werksodmController.selected.nsect}" title="#{bundle.CreateWerksodmTitle_nsect}" />
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_datum}" for="datum" />
+                        <p:calendar id="datum" pattern="MM/dd/yyyy" value="#{werksodmController.selected.datum}" title="#{bundle.EditWerksodmTitle_datum}"  showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_plaats}" for="plaats" />
+                        <p:inputText id="plaats" value="#{werksodmController.selected.plaats}" title="#{bundle.CreateWerksodmTitle_plaats}" />
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_doel}" for="doel" />
+                        <p:inputText id="doel" value="#{werksodmController.selected.doel}" title="#{bundle.CreateWerksodmTitle_doel}" />
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_catn}" for="catn" />
+                        <p:inputText id="catn" value="#{werksodmController.selected.catn}" title="#{bundle.CreateWerksodmTitle_catn}" />
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_uur}" for="uur" />
+                        <p:inputText id="uur" value="#{werksodmController.selected.uur}" title="#{bundle.CreateWerksodmTitle_uur}" />
+                        <p:outputLabel value="#{bundle.CreateWerksodmLabel_tbv}" for="tbv" />
+                        <p:inputText id="tbv" value="#{werksodmController.selected.tbv}" title="#{bundle.CreateWerksodmTitle_tbv}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{werksodmController.create}" value="#{bundle.Save}" update="display,:WerksodmListForm:datalist,:growl" oncomplete="handleSubmit(args,'WerksodmCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="WerksodmCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
